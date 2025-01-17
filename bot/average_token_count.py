@@ -1,3 +1,11 @@
+"""
+This file calculates the average token count of the documents stored in the "documents.db" database.
+It connects to the database, retrieves all rows from the "documents" table, and iterates through each row.
+It uses the chatGPT-3.5-turbo's tokenizer to calculate the token count of each document.
+The total token count is accumulated, and the average token count is calculated by dividing the total token count by the number of documents.
+The average token count is then printed to the console.
+"""
+
 #The average token count is: 1574.4411512946715
 
 import os

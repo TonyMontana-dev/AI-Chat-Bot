@@ -1,3 +1,11 @@
+"""
+This file is used to decompress the documents stored in the documents.db database.
+The script connects to the database, retrieves all rows from the "documents" table, and iterates through each row.
+It creates a new folder named "documents" if it does not exist and writes the contents of each row to a text file in that folder.
+The text files are named based on the URL of the document, with special characters replaced by underscores.
+This process helps extract and save the documents in a readable format for further analysis or processing.
+"""
+
 import os 
 if not os.path.exists('documents'):
     os.makedirs('documents')

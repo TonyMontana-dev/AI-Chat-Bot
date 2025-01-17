@@ -23,7 +23,7 @@ export default function About() {
           </li>
           <li>
             Andrea Marcelli -&nbsp;
-            <a href="mailto:ilmarcedesign@gmail.com" target="_blank" className="text-blue-500 hover:underline">ilmarcedesign@gmail.com</a>
+            <a href="mailto:ilmarcedesign@gmail.com" target="_blank" className="text-blue-500 hover:underline">donmarcelostudio@protonmail.com</a>
           </li>
         </ul>
         <div className="flex flex-wrap justify-center gap-8 mt-8">

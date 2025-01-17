@@ -1,3 +1,8 @@
+/**
+ * This file is used to log the status of the scraper. It prints the number of threads, links crawled, links saved, links skipped, and RAM usage.
+ */
+
+
 import config from '../config.json'
 import { stats, numberOfThreads, ramUsage } from './index.js'
 

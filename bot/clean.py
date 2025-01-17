@@ -1,3 +1,11 @@
+"""
+This file is used to clean the documents.db database by deleting rows that contain specific strings. 
+The script connects to the database, retrieves all rows from the "documents" table, and iterates through each row. 
+It checks if the URL in the row contains any of the strings in the "string_list" list. 
+If a match is found, the entire row is deleted from the table. 
+This process helps remove unwanted or irrelevant URLs from the database.
+"""
+
 import sqlite3
 conn = sqlite3.connect('documents.db')
 cursor = conn.cursor()

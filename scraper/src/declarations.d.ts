@@ -1,3 +1,7 @@
+/**
+ * This file is used to declare types for packages that don't have type definitions available.
+ */
+
 // Some packages we're using don't have type definitions available, so we need to add them
 
 declare module "html-to-text" {

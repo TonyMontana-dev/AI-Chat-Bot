@@ -1,3 +1,7 @@
+/**
+ * This file is the main file for the scraper. It scrapes the COD website for all the links and saves the content of the pages in a SQLite database.
+ */
+
 import sqlite3 from "sqlite3"
 import cheerio from "cheerio"
 import pdf from "pdf-parse-fork"
@@ -24,9 +28,9 @@ export const stats = {
 export let numberOfThreads = 0
 export let ramUsage = 0
 
-setInterval(() => {
-  const memoryUsage = process.memoryUsage();
-  ramUsage=(100*memoryUsage.heapUsed/memoryUsage.heapTotal).toFixed(2);
+setInterval(() => { // Update RAM usage every 100ms (for the stats page)
+  const memoryUsage = process.memoryUsage();  // Get memory usage of the process (heapTotal, heapUsed, external, rss) in bytes
+  ramUsage=(100*memoryUsage.heapUsed/memoryUsage.heapTotal).toFixed(2); // Calculate RAM usage in percentage (2 decimal places)
 }, 100);
 
 // Start creating scraping threads

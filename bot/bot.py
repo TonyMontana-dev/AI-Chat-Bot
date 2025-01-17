@@ -1,3 +1,12 @@
+"""
+This file is the main file for the chatbot. It uses the Flask framework to create a web server that listens for POST requests on the /api endpoint. 
+
+When a POST request is received, the chat_completion function is called with the request data, which is expected to be a list of messages. 
+The chat_completion function processes the messages and returns a response message. 
+The response message is then sent back to the client as a JSON object.
+
+"""
+
 # import documents from documents.db and load them to ChromaDB Vector library
 import re
 import pathlib
@@ -56,7 +65,7 @@ load_dotenv()
 import google.generativeai as genai
 genai.configure(api_key=os.getenv("API_KEY"))
 generation_config = {"temperature": 0}
-model = genai.GenerativeModel('gemini-pro',generation_config=generation_config,)
+model = genai.GenerativeModel('gemini-pro', generation_config=generation_config)
 
 def replace_multiple_line_breaks(text):
     pattern = r"\n{3,}"  # Define the regex pattern to match multiple line breaks
